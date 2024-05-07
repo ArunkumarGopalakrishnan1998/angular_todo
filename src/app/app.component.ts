@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CardComponent } from './card/card.component';
+import { TodoService } from './todo.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todo-app';
+
+  todoService: TodoService = inject(TodoService);
+
 }

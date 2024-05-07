@@ -1,0 +1,13 @@
+<div class="card__todo">
+    <div class="card__todo__name">
+        {{this.todoName}}
+    </div>
+
+    <div class="card__todo__edit">
+        <button class="card__edit__button">Edit</button>
+    </div>
+
+    <div class="card__todo__delete">
+        <button class="card__delete__button" (click)="this.todoService.deleteTodo(this.id)">Delete</button>
+    </div>
+</div>
