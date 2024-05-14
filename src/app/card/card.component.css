@@ -8,16 +8,17 @@
     padding: 20px;
     border-radius: 20px;
     margin: 4px;
+    box-shadow: 2px 2px 10px -7px black;
 }
 .card__todo__name {
-    width: 30vw;
+    width: 60%;
     font-size: x-large;
 }
 .card__todo__edit {
-    width: 10vw;
+    width: 20%;
 }
 .card__todo__delete {
-    width: 10vw;
+    width: 20%;
 }
 .card__edit__button {
     padding-top: 20px;
@@ -25,14 +26,14 @@
     padding-left: 24px;
     padding-right: 20px;
     margin-right: 20px;
-    background-color: rgb(73, 182, 157);
+    background-color: var(--positive);
     border: none;
     border-radius: 8px;
     width: 90%;
     cursor:pointer;
 }
 .card__edit__button:hover {
-    background-color: rgb(53, 135, 116);
+    background-color: green;
 }
 .card__delete__button {
     padding-top: 20px;
@@ -40,12 +41,19 @@
     padding-left: 24px;
     padding-right: 20px;
     margin-right: 20px;
-    background-color: rgb(0, 166, 255);
+    background-color: var(--negative);
     border: none;
     border-radius: 8px;
     width: 90%;
     cursor: pointer;
 }
 .card__delete__button:hover {
-    background-color: rgb(0, 108, 165);
+    background-color: red;
+}
+.card__todo__input {
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    width: 60%;
+    font-size: large;
 }

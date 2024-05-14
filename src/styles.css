@@ -1,7 +1,16 @@
+:root {
+    --primary: #1e90ff;
+    --secondary: #e6e6e6;
+    --positive: rgb(98, 202, 98);
+    --negative: rgb(217, 73, 73);
+    
+}
+
 * {
     margin: 0;
 }
 
 body {
-    background-image: linear-gradient(to right, rgb(164, 242, 164), rgb(179, 179, 254));
+    background-color: var(--secondary);
 }
+

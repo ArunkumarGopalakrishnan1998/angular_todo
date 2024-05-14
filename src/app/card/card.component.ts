@@ -12,4 +12,16 @@ export class CardComponent {
   @Input() todoName: string = '';
   @Input() id: number = 0;
 
+  isEdit: boolean = false;
+
+  toggleEdit() {
+    this.isEdit = !this.isEdit;
+  }
+
+  save() {
+    let new_value = (document.getElementById(String(this.id)) as HTMLInputElement).value;
+    this.todoService.editTodo(this.id, new_value);
+    this.toggleEdit();
+  }
+
 }

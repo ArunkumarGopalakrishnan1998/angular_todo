@@ -15,16 +15,25 @@ export class TodoService {
         id = Math.round(Math.random() * 100),
         obj = {id: id, todoName: todo};
     
+    (document.getElementById('inputData') as HTMLInputElement).value = '';
+
     this.todos.push(obj);
+    localStorage.setItem('todos', JSON.stringify(this.todos));
   }
 
   deleteTodo(id: number) {
     let newTodos = this.todos.filter(obj => obj.id !== id);
     this.todos = newTodos;
+    localStorage.setItem('todos', JSON.stringify(this.todos));
   }
 
-  editTodo() {
-
+  editTodo(id: number, val: string) {
+    this.todos.forEach((obj) => {
+      if (obj.id === id) {
+        obj.todoName = val;
+      }
+    });
+    localStorage.setItem('todos', JSON.stringify(this.todos));
   }
 
 }
